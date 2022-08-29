@@ -14,7 +14,7 @@ bibliography: references.bib
 
 ## Introduction
 
-This is my attempt at practicing the basics of Quarto. For this notebook, I will be using the Bank Marketing Data set from [@Moro].
+This is my attempt at practicing the basics of Quarto. For this notebook, I will be using the Bank Marketing Data set from [@Moro]. I obtained the dataset from [UCI](https://archive.ics.uci.edu/ml/datasets/bank+marketing).
 
 ## Exploring the Data
 
