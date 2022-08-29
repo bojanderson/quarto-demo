@@ -1,0 +1,61 @@
+---
+title: "Quarto Basics"
+author:
+  - name: Bo Anderson
+    email: bjanderson91@gmail.com
+format:
+  html:
+    code-fold: true
+jupyter: python3
+bibliography: references.bib
+---
+
+# Quarto Basics with Bank Marketing Data
+
+## Introduction
+
+This is my attempt at practicing the basics of Quarto. For this notebook, I will be using the Bank Marketing Data set from [@Moro].
+
+## Exploring the Data
+
+I start by importing the data and viewing the first few rows.
+
+
+```{python}
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('data/bank.csv', delimiter = ';')
+
+df.head()
+```
+
+
+I realize some of the data is encoded as Y/N strings instead of 1/0 binary values. So I convert them to binary values.
+
+```{python}
+df['default'] = np.where(df['default'] == 'yes', 1, 0)
+
+df['housing'] = np.where(df['housing'] == 'yes', 1, 0)
+
+df['loan'] = np.where(df['loan'] == 'yes', 1, 0)
+
+df['y'] = np.where(df['y'] == 'yes', 1, 0)
+```
+
+The balance of the customer's bank account is probably an important factor in this dataset so let's see the distribution of the data. We have it graphed in a histogram (see @fig-1).
+
+```{python}
+#| label: fig-1
+#| fig-cap: Distribution of the balance of the customer's bank account
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.histplot(data = df, x = 'balance')
+plt.show()
+```
+
+## Conclusion
+
+This was my attempt at practicing the basics of Quarto.
