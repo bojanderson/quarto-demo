@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "hello.html",
+    "href": "hello.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "References\n\nMoro, et al., Sérgio. 2014. “A Data-Driven Approach to Predict the Success of Bank Telemarketing.” Decision Support Systems 62: 22–31."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "quarto-demo",
+    "section": "",
+    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites."
+  }
+]
